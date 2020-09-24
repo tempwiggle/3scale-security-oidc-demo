@@ -62,7 +62,7 @@
                 "source": {
                     "type": "Git",
                     "git": {
-                        "uri": "https://github.com/michaelkotelnikov/3scale-security-oidc-demo.git",
+                        "uri": "https://github.com/tempwiggle/3scale-security-oidc-demo.git",
                         "ref": "secured"
                     },
                     "contextDir": "/projects/accidentalert-ui"
@@ -73,7 +73,7 @@
                         "from": {
                             "kind": "ImageStreamTag",
                             "namespace": "openshift",
-                            "name": "nodejs:8"
+                            "name": "nodejs:10"
                         },
                         "env": [
                             {
