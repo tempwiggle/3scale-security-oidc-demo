@@ -366,8 +366,6 @@
 			});
 
 			$('#postReport').click(function () {
-				console.log(keycloak.token);
-				keycloak.updateToken(30).then(function () {
 					console.log(keycloak.token);
 					$.ajax({
 						type: "post",
@@ -385,7 +383,8 @@
 							console.log(error);
 						}
 					});
-				});
+					console.log(keycloak.token);
+
 			});
 		})(jQuery);
 	</script>
