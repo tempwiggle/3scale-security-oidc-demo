@@ -366,7 +366,9 @@
 			});
 
 			$('#postReport').click(function () {
+				console.log(keycloak.token);
 				keycloak.updateToken(30).success(function () {
+					console.log(keycloak.token);
 					$.ajax({
 						type: "post",
 						contentType: "application/json",
@@ -400,7 +402,6 @@
 		var keycloak = Keycloak(keyOptions);
 		keycloak.init({ onLoad: 'check-sso' }).success(function (authenticated) {
 			console.log(authenticated ? 'authenticated' : 'not authenticated');
-			console.log(keycloak.token);
 			if (authenticated) {
 				if (keycloak.hasRealmRole('policedept')) {
 					$('#accident-app').show();
