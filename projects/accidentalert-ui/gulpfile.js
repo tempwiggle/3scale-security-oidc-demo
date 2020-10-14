@@ -95,6 +95,7 @@ gulp.task('html', ['clean'], function () {
         .pipe(include())
         .pipe(replace('http://localhost:18080', process.env.SSO_URL || 'http://localhost:18080'))
         .pipe(replace('http://localhost:8080', process.env.BACKEND_URL || 'http://localhost:8080'))
+        .pipe(replace('clientid3scale', process.env.CLIENTID || 'clientid3scale'))
         .on("error", notify.onError({ message: "Error: <%= error.message %>", title: "Error running html task" }))
         .pipe(gulp.dest(distPath));
 });
